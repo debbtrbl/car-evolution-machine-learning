@@ -1,4 +1,4 @@
-# 🚗 Car Evaluation Dataset — Classificação com Machine Learning (Avaliação de Modelos)
+# Car Evaluation Dataset — Classificação com Machine Learning (Avaliação de Modelos)
 
 ## 📌 Visão Geral
 
@@ -45,6 +45,10 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
 ## 🔄 Pré-processamento
 
 - Conversão de variáveis categóricas para numéricas utilizando **Label Encoding**
+  - classe 0 → acc
+  - classe 1 → good
+  - classe 2 → unacc
+  - classe 3 → vgood
 - Separação entre variáveis independentes (X) e variável alvo (y)
 - Divisão dos dados em treino e teste (80/20)
 
@@ -52,7 +56,7 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
 
 ## 🧠 Modelos Testados
 
-### 📌 Regressão Logística (Baseline)
+### Regressão Logística (Baseline)
 - Acurácia aproximada: ~68%
 - Desempenho fraco em classes minoritárias
 - Modelo simples, usado como baseline
@@ -67,7 +71,7 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
 
 ---
 
-### 🌳 Random Forest
+### Random Forest
 - Acurácia aproximada: ~96%
 - Bom desempenho geral
 - Melhor equilíbrio entre classes
@@ -83,8 +87,8 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
 
 ---
 
-### ⚖️ Técnicas de Balanceamento
-- Random Forest + Oversampling
+### Técnicas de Balanceamento
+- **Random Forest + Oversampling**
   - Accuracy: ~0.97
 
     | Classe | Precision | Recall | F1-score | Support |
@@ -99,7 +103,7 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
     - Recall da classe 1 não melhorou
     - Indica que oversampling não resolveu o problema principal
   
-- Random Forest + SMOTE
+- **Random Forest + SMOTE**
   - Accuracy: ~0.97
  
     | Classe | Precision | Recall | F1-score | Support |
@@ -109,10 +113,10 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
     | 2      | 1.00     | 1.00   | 1.00     | 237      |
     | 3      | 0.75     | 0.88   | 0.81     | 17       |
 
-     Observações
-      - SMOTE não trouxe melhorias significativas
-      - Em alguns casos, piorou o recall da classe minoritária
-      - Mantém performance semelhante ao modelo original
+  Observações
+    - SMOTE não trouxe melhorias significativas
+    - Em alguns casos, piorou o recall da classe minoritária
+    - Mantém performance semelhante ao modelo original
 
 📌 Resultado:
 - Pequenas variações na acurácia
@@ -120,7 +124,7 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
 
 ---
 
-### 🚀 XGBoost
+### XGBoost
 - Acurácia: ~98.5%
 - Melhor desempenho geral
 - Excelente performance nas classes minoritárias
@@ -135,7 +139,7 @@ O dataset apresenta **desbalanceamento significativo**, com predominância da cl
 
 ---
 
-### ⚖️ SVM
+### SVM
 - Acurácia: ~89%
 - Baixo desempenho na classe minoritária
 - Sensível ao desbalanceamento dos dados
