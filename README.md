@@ -1,4 +1,4 @@
-# 🚗 Car Evaluation Dataset — Classificação com Machine Learning
+# 🚗 Car Evaluation Dataset — Classificação com Machine Learning (Avaliação de Modelos)
 
 ## 📌 Visão Geral
 
